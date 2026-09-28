@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Moaz Ahmed | Automotive and Event Photographer</title>
+<meta name="description" content="Moaz Ahmed is an automotive and event photographer based in Saudi Arabia, building a photography agency in Riyadh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Hanken+Grotesk:wght@400;500;600&family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#10162B;
+  --surface:#192142;
+  --surface-2:#222c56;
+  --ink:#F3F0E6;
+  --ink-soft:#B4B9CF;
+  --line:rgba(243,240,230,.16);
+  --tail:#F0475A;
+  --sodium:#F5A93B;
+  --head:#FFF6D6;
+  --display:'Big Shoulders Display','Arial Narrow','Impact',sans-serif;
+  --body:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#EEF0F6;--surface:#FFFFFF;--surface-2:#E1E5F0;--ink:#141A33;--ink-soft:#4B5273;--line:rgba(20,26,51,.16);--tail:#D42E44;--sodium:#B9700A;
+  }
+}
+:root[data-theme="light"]{--bg:#EEF0F6;--surface:#FFFFFF;--surface-2:#E1E5F0;--ink:#141A33;--ink-soft:#4B5273;--line:rgba(20,26,51,.16);--tail:#D42E44;--sodium:#B9700A}
+:root[data-theme="dark"]{--bg:#10162B;--surface:#192142;--surface-2:#222c56;--ink:#F3F0E6;--ink-soft:#B4B9CF;--line:rgba(243,240,230,.16);--tail:#F0475A;--sodium:#F5A93B}
+html{height:auto;scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html[lang="ar"] body{font-family:'Cairo','Hanken Grotesk',Arial,sans-serif;line-height:1.85}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] .display{font-family:'Cairo',sans-serif;font-weight:800;letter-spacing:0;text-transform:none}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sodium);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+
+/* top bar */
+.bar{position:fixed;top:0;left:0;right:0;z-index:20;padding:calc(12px + env(safe-area-inset-top,0px)) clamp(16px,4vw,40px) 12px;display:flex;justify-content:space-between;align-items:center;gap:12px;pointer-events:none}
+.bar > *{pointer-events:auto}
+.mark{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.02em;text-decoration:none;color:#F3F0E6;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.bar-actions{display:flex;gap:8px}
+.chip-btn{font:600 14px var(--body);color:#F3F0E6;background:rgba(16,22,43,.62);border:1px solid rgba(243,240,230,.3);padding:8px 14px;border-radius:999px;cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.chip-btn:hover{border-color:var(--sodium)}
+html[lang="ar"] .chip-btn{font-family:'Cairo',sans-serif}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;background:#0A0F20;color:#F3F0E6;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;isolation:isolate}
+#trails{position:absolute;inset:0;width:100%;height:100%;z-index:-1;display:block;touch-action:pan-y}
+.hero-inner{padding-block:120px 36px}
+.hero h1{font-family:var(--display);font-weight:900;font-size:clamp(76px,17vw,230px);line-height:.84;margin:0;letter-spacing:-.01em;text-transform:uppercase}
+.hero h1 span{display:block}
+.hero h1 .l2{-webkit-text-stroke:2px #F3F0E6;color:transparent}
+html[lang="ar"] .hero h1{font-size:clamp(64px,13vw,170px);line-height:1.05}
+html[lang="ar"] .hero h1 .l2{-webkit-text-stroke:0;color:var(--sodium)}
+.hero p.lead{max-width:34ch;font-size:clamp(18px,2.2vw,24px);margin:26px 0 0;color:#dfe2ef}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;font:600 16px var(--body);padding:14px 22px;border-radius:6px;text-decoration:none;border:2px solid transparent;cursor:pointer}
+html[lang="ar"] .btn{font-family:'Cairo',sans-serif}
+.btn-primary{background:var(--tail);color:#fff}
+.btn-primary:hover{background:#ff5f71}
+.btn-ghost{border-color:rgba(243,240,230,.5);color:#F3F0E6;background:transparent}
+.btn-ghost:hover{border-color:var(--sodium);color:var(--sodium)}
+.shutter{margin-top:34px;padding-top:18px;border-top:1px solid rgba(243,240,230,.2);display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center}
+.shutter label{font-weight:600;font-size:15px}
+.shutter .val{font-family:var(--display);font-weight:800;font-size:30px;min-width:3.4ch;text-align:end;color:var(--sodium);font-variant-numeric:tabular-nums}
+.shutter .hint{grid-column:1/-1;font-size:14px;color:#b4b9cf;margin:0}
+input[type=range]{width:100%;accent-color:var(--tail);height:28px;background:transparent}
+
+/* sections */
+section{padding-block:clamp(72px,11vw,140px)}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(44px,7vw,92px);line-height:.95;margin:0 0 20px;text-transform:uppercase;letter-spacing:.005em}
+.sub{max-width:52ch;color:var(--ink-soft);margin:0 0 44px;font-size:18px}
+
+/* about */
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(28px,6vw,80px);align-items:start}
+.about p{margin:0 0 1em;max-width:60ch}
+.facts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.facts b{font-weight:600}
+.facts span{color:var(--ink-soft);text-align:end}
+
+/* viewfinder work */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.tab{font:600 16px var(--body);padding:11px 20px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+html[lang="ar"] .tab{font-family:'Cairo',sans-serif}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.finder{display:grid;grid-template-columns:1.5fr 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.viewport{position:relative;min-height:380px;background:#0A0F20;cursor:crosshair;overflow:hidden;touch-action:pan-y}
+.viewport svg.scene{position:absolute;inset:0;width:100%;height:100%}
+.focus-box{position:absolute;width:86px;height:86px;border:2px solid var(--sodium);pointer-events:none;transform:translate(-50%,-50%);left:50%;top:50%;transition:left .18s ease-out,top .18s ease-out;box-shadow:0 0 0 1px rgba(0,0,0,.4)}
+.focus-box::before,.focus-box::after{content:"";position:absolute;background:var(--sodium)}
+.focus-box::before{left:50%;top:-10px;bottom:-10px;width:2px;transform:translateX(-50%);clip-path:polygon(0 0,100% 0,100% 12%,0 12%,0 88%,100% 88%,100% 100%,0 100%)}
+.focus-box::after{top:50%;left:-10px;right:-10px;height:2px;transform:translateY(-50%);clip-path:polygon(0 0,12% 0,12% 100%,0 100%,88% 0,100% 0,100% 100%,88% 100%)}
+.hud{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:12px;padding:12px 16px;font:600 14px var(--body);color:#F3F0E6;background:linear-gradient(transparent,rgba(0,0,0,.6));font-variant-numeric:tabular-nums;direction:ltr}
+.hud .rec{color:var(--tail)}
+.finder-copy{padding:clamp(24px,4vw,44px);display:flex;flex-direction:column;justify-content:center;gap:16px}
+.finder-copy h3{font-family:var(--display);font-weight:800;font-size:clamp(34px,4vw,50px);line-height:1;margin:0;text-transform:uppercase}
+.finder-copy p{margin:0;color:var(--ink-soft)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.tags li{font-size:14px;font-weight:600;padding:5px 12px;border:1px solid var(--line);border-radius:999px}
+
+/* experience */
+.exp{list-style:none;margin:0;padding:0;border-inline-start:2px solid var(--line)}
+.exp li{position:relative;padding:0 0 38px clamp(22px,4vw,44px)}
+html[dir="rtl"] .exp li{padding:0 clamp(22px,4vw,44px) 38px 0}
+.exp li::before{content:"";position:absolute;inset-inline-start:-8px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--tail)}
+.exp li:last-child{padding-bottom:0}
+.exp h3{font-family:var(--display);font-weight:800;font-size:clamp(28px,3.4vw,42px);margin:0 0 4px;text-transform:uppercase;line-height:1.05}
+.status{display:inline-block;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--surface-2);color:var(--ink);margin-bottom:8px}
+.exp p{margin:0;max-width:62ch;color:var(--ink-soft)}
+
+/* skills as focus rack */
+.rack{display:flex;flex-wrap:wrap;gap:6px 26px;margin:0;padding:0;list-style:none}
+.rack li{font-family:var(--display);font-weight:800;font-size:clamp(34px,6vw,76px);line-height:1.05;text-transform:uppercase;cursor:default;transition:filter .3s,opacity .3s,color .3s}
+html[lang="ar"] .rack li{font-size:clamp(28px,4.6vw,56px)}
+.rack.active li{filter:blur(5px);opacity:.4}
+.rack.active li.on{filter:none;opacity:1;color:var(--sodium)}
+.rack-note{margin-top:22px;color:var(--ink-soft);font-size:15px}
+
+/* agency */
+.agency{background:var(--surface);border-block:1px solid var(--line)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:36px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.services div{padding:28px;border-inline-end:1px solid var(--line)}
+.services div:last-child{border-inline-end:0}
+.services h3{font-family:var(--display);font-weight:800;font-size:30px;margin:0 0 8px;text-transform:uppercase}
+.services p{margin:0;color:var(--ink-soft);font-size:16px}
+
+/* contact */
+.contact h2{font-size:clamp(52px,10vw,150px)}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.langs{margin-top:44px;color:var(--ink-soft);font-size:15px}
+footer{padding:28px 0 48px;color:var(--ink-soft);font-size:14px;border-top:1px solid var(--line)}
+
+@media (max-width:820px){
+  .about,.finder{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr}
+  .services div{border-inline-end:0;border-bottom:1px solid var(--line)}
+  .services div:last-child{border-bottom:0}
+  .viewport{min-height:300px}
+  .shutter{grid-template-columns:1fr auto}
+  .shutter label{grid-column:1/-1}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a class="mark" href="#top" aria-label="Moaz Ahmed">MA</a>
+  <div class="bar-actions">
+    <button class="chip-btn" id="themeBtn" type="button" data-i18n="theme">Light / dark</button>
+    <button class="chip-btn" id="langBtn" type="button" lang="ar">العربية</button>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <canvas id="trails" aria-hidden="true"></canvas>
+  <div class="wrap hero-inner">
+    <h1><span data-i18n="h1a">Moaz</span><span class="l2" data-i18n="h1b">Ahmed</span></h1>
+    <p class="lead" data-i18n="lead">I photograph cars, events and the moments people want to keep.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#contact" data-i18n="cta1">Work with me</a>
+      <a class="btn btn-ghost" href="#work" data-i18n="cta2">See what I shoot</a>
+    </div>
+    <div class="shutter">
+      <label for="shutter" data-i18n="shutterLabel">Shutter speed</label>
+      <input id="shutter" type="range" min="0" max="4" step="1" value="2" aria-describedby="shutterHint">
+      <output class="val" id="shutterVal" for="shutter">1s</output>
+      <p class="hint" id="shutterHint" data-i18n="shutterHint">Slide to change how long light stays in the frame. Move your cursor across the picture to paint with it.</p>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <h2 data-i18n="aboutTitle">Behind the lens</h2>
+      <p data-i18n="aboutP1">I'm a photographer based in Saudi Arabia. Most of my work is automotive events and private photoshoots, where the job is to document vehicles, the environment around them and the moments that happen there.</p>
+      <p data-i18n="aboutP2">I care about visual quality and composition, and I'm now building a photography agency in Riyadh.</p>
+    </div>
+    <ul class="facts">
+      <li><b data-i18n="f1k">Based in</b><span data-i18n="f1v">Saudi Arabia</span></li>
+      <li><b data-i18n="f2k">Focus</b><span data-i18n="f2v">Automotive, events, private shoots</span></li>
+      <li><b data-i18n="f3k">Recurring client</b><span>Seven Car Lounge</span></li>
+      <li><b data-i18n="f4k">Building</b><span data-i18n="f4v">A photography agency in Riyadh</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2 data-i18n="workTitle">What I shoot</h2>
+    <p class="sub" data-i18n="workSub">Pick a subject, then move over the frame to focus.</p>
+    <div class="tabs" role="tablist" aria-label="Photography types">
+      <button class="tab" role="tab" id="t-auto" aria-selected="true" data-k="auto" data-i18n="tabAuto">Automotive</button>
+      <button class="tab" role="tab" id="t-event" aria-selected="false" data-k="event" data-i18n="tabEvent">Events</button>
+      <button class="tab" role="tab" id="t-private" aria-selected="false" data-k="private" data-i18n="tabPrivate">Private shoots</button>
+    </div>
+    <div class="finder">
+      <div class="viewport" id="viewport" role="img" aria-label="Illustrated viewfinder">
+        <svg class="scene" id="scene" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+        <div class="focus-box" id="focusBox"></div>
+        <div class="hud"><span><span class="rec">●</span> <span id="hudMode">AUTO</span></span><span id="hudExp">f/2.8  1/250  ISO 200</span></div>
+      </div>
+      <div class="finder-copy" id="finderCopy" role="tabpanel" aria-live="polite">
+        <h3 id="fcTitle"></h3>
+        <p id="fcText"></p>
+        <ul class="tags" id="fcTags"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <h2 data-i18n="expTitle">Experience</h2>
+    <p class="sub" data-i18n="expSub">Hands-on work across events and shoots.</p>
+    <ul class="exp">
+      <li>
+        <span class="status" data-i18n="st1">Recurring</span>
+        <h3>Seven Car Lounge</h3>
+        <p data-i18n="e1">Photographer. Automotive event coverage, including the yearly events hosted by Seven Car Lounge in Saudi Arabia.</p>
+      </li>
+      <li>
+        <span class="status" data-i18n="st2">Ongoing</span>
+        <h3 data-i18n="e2t">Automotive and event photographer</h3>
+        <p data-i18n="e2">Photography across multiple events, mainly automotive events and private photoshoots. Vehicles, event atmosphere and automotive content made for visual presentation and social media.</p>
+      </li>
+      <li>
+        <span class="status" data-i18n="st3">In development</span>
+        <h3 data-i18n="e3t">Photography agency, Riyadh</h3>
+        <p data-i18n="e3">An agency concept offering professional photography services, with an emphasis on automotive events, private photoshoots and visual content creation.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2 data-i18n="skillsTitle">Skills</h2>
+    <p class="sub" data-i18n="skillsSub">Hover or tab through the list. What you choose comes into focus.</p>
+    <ul class="rack" id="rack">
+      <li tabindex="0" data-i18n="s1">Event photography</li>
+      <li tabindex="0" data-i18n="s2">Automotive photography</li>
+      <li tabindex="0" data-i18n="s3">Private photoshoots</li>
+      <li tabindex="0" data-i18n="s4">Visual composition</li>
+      <li tabindex="0" data-i18n="s5">Event coverage</li>
+      <li tabindex="0" data-i18n="s6">Content creation</li>
+      <li tabindex="0" data-i18n="s7">Photography project development</li>
+    </ul>
+  </div>
+</section>
+
+<section class="agency" id="agency">
+  <div class="wrap">
+    <h2 data-i18n="agTitle">The agency, Riyadh</h2>
+    <p class="sub" style="margin-bottom:0" data-i18n="agSub">I'm developing a photography agency focused on professional photography services, automotive events and visual content creation.</p>
+    <div class="services">
+      <div><h3 data-i18n="sv1t">Automotive events</h3><p data-i18n="sv1">Full coverage of meets, launches and lounge nights, from the cars to the crowd.</p></div>
+      <div><h3 data-i18n="sv2t">Private photoshoots</h3><p data-i18n="sv2">Planned around the person, the vehicle and the location.</p></div>
+      <div><h3 data-i18n="sv3t">Visual content</h3><p data-i18n="sv3">Images made for social media and visual presentation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 data-i18n="ctTitle">Let's shoot</h2>
+    <p class="sub" data-i18n="ctSub">Recruiting, hosting an event or planning a shoot? Message me and we'll talk through it.</p>
+    <div class="links">
+      <a class="btn btn-primary" href="https://wa.me/966531417267" target="_blank" rel="noopener" data-i18n="wa">Message on WhatsApp</a>
+      <a class="btn btn-ghost" style="color:var(--ink);border-color:var(--line)" href="https://www.linkedin.com/in/moaz-arafah-657462388/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" style="color:var(--ink);border-color:var(--line)" href="tel:+966531417267" dir="ltr">+966 53 141 7267</a>
+    </div>
+    <p class="langs" data-i18n="langs">Languages: Arabic (fluent), English (fluent)</p>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© Moaz Ahmed</div></footer>
+
+<script>
+/* ---------- i18n ---------- */
+var I18N = {
+  en:{theme:"Light / dark",h1a:"Moaz",h1b:"Ahmed",lead:"I photograph cars, events and the moments people want to keep.",cta1:"Work with me",cta2:"See what I shoot",
+    shutterLabel:"Shutter speed",shutterHint:"Slide to change how long light stays in the frame. Move your cursor across the picture to paint with it.",
+    aboutTitle:"Behind the lens",aboutP1:"I'm a photographer based in Saudi Arabia. Most of my work is automotive events and private photoshoots, where the job is to document vehicles, the environment around them and the moments that happen there.",aboutP2:"I care about visual quality and composition, and I'm now building a photography agency in Riyadh.",
+    f1k:"Based in",f1v:"Saudi Arabia",f2k:"Focus",f2v:"Automotive, events, private shoots",f3k:"Recurring client",f4k:"Building",f4v:"A photography agency in Riyadh",
+    workTitle:"What I shoot",workSub:"Pick a subject, then move over the frame to focus.",tabAuto:"Automotive",tabEvent:"Events",tabPrivate:"Private shoots",
+    expTitle:"Experience",expSub:"Hands-on work across events and shoots.",st1:"Recurring",st2:"Ongoing",st3:"In development",
+    e1:"Photographer. Automotive event coverage, including the yearly events hosted by Seven Car Lounge in Saudi Arabia.",
+    e2t:"Automotive and event photographer",e2:"Photography across multiple events, mainly automotive events and private photoshoots. Vehicles, event atmosphere and automotive content made for visual presentation and social media.",
+    e3t:"Photography agency, Riyadh",e3:"An agency concept offering professional photography services, with an emphasis on automotive events, private photoshoots and visual content creation.",
+    skillsTitle:"Skills",skillsSub:"Hover or tab through the list. What you choose comes into focus.",
+    s1:"Event photography",s2:"Automotive photography",s3:"Private photoshoots",s4:"Visual composition",s5:"Event coverage",s6:"Content creation",s7:"Photography project development",
+    agTitle:"The agency, Riyadh",agSub:"I'm developing a photography agency focused on professional photography services, automotive events and visual content creation.",
+    sv1t:"Automotive events",sv1:"Full coverage of meets, launches and lounge nights, from the cars to the crowd.",sv2t:"Private photoshoots",sv2:"Planned around the person, the vehicle and the location.",sv3t:"Visual content",sv3:"Images made for social media and visual presentation.",
+    ctTitle:"Let's shoot",ctSub:"Recruiting, hosting an event or planning a shoot? Message me and we'll talk through it.",wa:"Message on WhatsApp",langs:"Languages: Arabic (fluent), English (fluent)",
+    rackNote:"",
+    work:{auto:{t:"Automotive",p:"Vehicles are my main subject. I work on composition and visual quality so each car is presented the way it deserves, for events, for social media and for presentation.",tags:["Vehicles","Event atmosphere","Social media content"]},
+          event:{t:"Events",p:"Coverage of the whole event: the atmosphere, the people, the details. That includes the yearly events hosted by Seven Car Lounge in Saudi Arabia.",tags:["Event coverage","Atmosphere","Yearly events"]},
+          private:{t:"Private shoots",p:"Photoshoots built around one person or one story, with the same attention to composition as the larger events.",tags:["One-on-one sessions","Planned sessions","Visual content"]}}},
+  ar:{theme:"فاتح / داكن",h1a:"معاذ",h1b:"أحمد",lead:"أصوّر السيارات والفعاليات واللحظات التي يريد الناس الاحتفاظ بها.",cta1:"لنعمل معًا",cta2:"شاهد ما أصوّره",
+    shutterLabel:"سرعة الغالق",shutterHint:"حرّك الشريط لتغيير مدة بقاء الضوء في الصورة. حرّك المؤشر فوق الصورة لترسم بالضوء.",
+    aboutTitle:"خلف العدسة",aboutP1:"أنا مصوّر مقيم في المملكة العربية السعودية. معظم عملي في فعاليات السيارات والجلسات التصويرية الخاصة، حيث أوثّق السيارات وما حولها واللحظات التي تحدث هناك.",aboutP2:"أهتم بجودة الصورة والتكوين، وأعمل حاليًا على بناء وكالة تصوير في الرياض.",
+    f1k:"المقر",f1v:"المملكة العربية السعودية",f2k:"التخصص",f2v:"السيارات والفعاليات والجلسات الخاصة",f3k:"عميل متكرر",f4k:"أبني حاليًا",f4v:"وكالة تصوير في الرياض",
+    workTitle:"ما الذي أصوّره",workSub:"اختر موضوعًا ثم حرّك المؤشر فوق الإطار لتركّز عليه.",tabAuto:"السيارات",tabEvent:"الفعاليات",tabPrivate:"الجلسات الخاصة",
+    expTitle:"الخبرة",expSub:"عمل ميداني في الفعاليات والجلسات التصويرية.",st1:"متكرر",st2:"مستمر",st3:"قيد التطوير",
+    e1:"مصوّر. تغطية فعاليات السيارات، بما فيها الفعاليات السنوية التي تنظمها Seven Car Lounge في السعودية.",
+    e2t:"مصوّر سيارات وفعاليات",e2:"تصوير في فعاليات متعددة، أغلبها فعاليات سيارات وجلسات تصوير خاصة. سيارات وأجواء فعاليات ومحتوى مرتبط بالسيارات للعرض البصري ووسائل التواصل الاجتماعي.",
+    e3t:"وكالة تصوير، الرياض",e3:"فكرة وكالة تقدّم خدمات تصوير احترافية، مع التركيز على فعاليات السيارات والجلسات الخاصة وصناعة المحتوى البصري.",
+    skillsTitle:"المهارات",skillsSub:"مرّر المؤشر أو تنقّل بلوحة المفاتيح. ما تختاره يظهر بوضوح.",
+    s1:"تصوير الفعاليات",s2:"تصوير السيارات",s3:"الجلسات التصويرية الخاصة",s4:"التكوين البصري",s5:"تغطية الفعاليات",s6:"صناعة المحتوى",s7:"تطوير مشاريع التصوير",
+    agTitle:"الوكالة، الرياض",agSub:"أطوّر وكالة تصوير تركّز على خدمات التصوير الاحترافي وفعاليات السيارات وصناعة المحتوى البصري.",
+    sv1t:"فعاليات السيارات",sv1:"تغطية كاملة للتجمعات والإطلاقات والأمسيات، من السيارات إلى الحضور.",sv2t:"جلسات خاصة",sv2:"مخططة حول الشخص والسيارة والموقع.",sv3t:"محتوى بصري",sv3:"صور مصنوعة لوسائل التواصل الاجتماعي والعرض البصري.",
+    ctTitle:"لنصوّر معًا",ctSub:"توظيف، أو تنظيم فعالية، أو التخطيط لجلسة تصوير؟ راسلني ونتحدث عن التفاصيل.",wa:"راسلني عبر واتساب",langs:"اللغات: العربية (بطلاقة)، الإنجليزية (بطلاقة)",
+    work:{auto:{t:"السيارات",p:"السيارات هي موضوعي الرئيسي. أعمل على التكوين وجودة الصورة لتظهر كل سيارة كما تستحق، في الفعاليات ووسائل التواصل والعروض البصرية.",tags:["السيارات","أجواء الفعاليات","محتوى لوسائل التواصل"]},
+          event:{t:"الفعاليات",p:"تغطية الفعالية كاملة: الأجواء والناس والتفاصيل. ويشمل ذلك الفعاليات السنوية التي تنظمها Seven Car Lounge في السعودية.",tags:["تغطية الفعاليات","الأجواء","فعاليات سنوية"]},
+          private:{t:"الجلسات الخاصة",p:"جلسات مبنية حول شخص واحد أو قصة واحدة، بنفس الاهتمام بالتكوين الذي أعطيه للفعاليات الكبرى.",tags:["جلسات فردية","جلسات مخططة","محتوى بصري"]}}}
+};
+var lang = 'en', current = 'auto';
+function applyLang(l){
+  lang = l;
+  var d = I18N[l];
+  document.documentElement.lang = l;
+  document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var k = el.getAttribute('data-i18n');
+    if (d[k] !== undefined) el.textContent = d[k];
+  });
+  document.getElementById('langBtn').textContent = l === 'ar' ? 'English' : 'العربية';
+  document.getElementById('langBtn').lang = l === 'ar' ? 'en' : 'ar';
+  showWork(current);
+  document.title = l === 'ar' ? 'معاذ أحمد | مصوّر سيارات وفعاليات' : 'Moaz Ahmed | Automotive and Event Photographer';
+  try { localStorage.setItem('ma-lang', l); } catch(e){}
+}
+document.getElementById('langBtn').addEventListener('click', function(){ applyLang(lang === 'en' ? 'ar' : 'en'); });
+
+document.getElementById('themeBtn').addEventListener('click', function(){
+  var root = document.documentElement;
+  var isLight = getComputedStyle(root).getPropertyValue('--bg').trim().toLowerCase() === '#eef0f6';
+  var next = isLight ? 'dark' : 'light';
+  root.setAttribute('data-theme', next);
+  try { localStorage.setItem('ma-theme', next); } catch(e){}
+});
+
+/* ---------- Light trails hero ---------- */
+(function(){
+  var cv = document.getElementById('trails'), ctx = cv.getContext('2d');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W = 0, H = 0, dpr = 1, cars = [], mouse = null;
+  var ALPHAS = [0.5, 0.24, 0.11, 0.055, 0.028];
+  var LABELS = ['1/500','1/60','1s','8s','30s'];
+  var alpha = ALPHAS[2];
+  var slider = document.getElementById('shutter'), out = document.getElementById('shutterVal');
+  slider.addEventListener('input', function(){
+    var i = +slider.value; alpha = ALPHAS[i]; out.textContent = LABELS[i];
+  });
+  function resize(){
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var r = cv.getBoundingClientRect(); W = r.width; H = r.height;
+    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.fillStyle = '#0A0F20'; ctx.fillRect(0,0,W,H);
+    build();
+  }
+  function roadY(x, lane){
+    return H * (0.28 + lane * 0.13) + Math.sin(x / W * Math.PI * 1.6 + lane * 0.9) * H * 0.06 + (x / W) * H * 0.1;
+  }
+  function build(){
+    cars = [];
+    var n = W < 600 ? 10 : 18;
+    for (var i = 0; i < n; i++){
+      var dir = i % 2 ? 1 : -1;
+      cars.push({ x: Math.random() * W, lane: (i % 5) * 0.9 / 4 * 4 / 4 + Math.random() * 0.25, dir: dir, v: 60 + Math.random() * 150, gap: 5 + Math.random() * 3 });
+    }
+  }
+  function dot(x, y, r, color, a){
+    ctx.globalAlpha = a; ctx.fillStyle = color;
+    ctx.beginPath(); ctx.arc(x, y, r, 0, 6.2832); ctx.fill();
+  }
+  var last = 0;
+  function frame(t){
+    var dt = Math.min((t - last) / 1000 || 0.016, 0.05); last = t;
+    ctx.globalCompositeOperation = 'source-over'; ctx.globalAlpha = alpha;
+    ctx.fillStyle = '#0A0F20'; ctx.fillRect(0, 0, W, H);
+    ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'lighter';
+    for (var i = 0; i < cars.length; i++){
+      var c = cars[i];
+      c.x += c.dir * c.v * dt;
+      if (c.x > W + 40) c.x = -40; if (c.x < -40) c.x = W + 40;
+      var y = roadY(c.x, c.lane), col = c.dir > 0 ? '#FFF1C4' : '#F0475A';
+      dot(c.x, y - c.gap, 2.4, col, 1); dot(c.x, y + c.gap, 2.4, col, 1);
+      dot(c.x, y, 9, col, 0.06);
+    }
+    if (mouse){ dot(mouse.x, mouse.y, 3.4, '#F5A93B', 1); dot(mouse.x, mouse.y, 14, '#F5A93B', 0.08); }
+    ctx.globalCompositeOperation = 'source-over'; ctx.globalAlpha = 1;
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  function still(){
+    ctx.fillStyle = '#0A0F20'; ctx.fillRect(0,0,W,H);
+    ctx.globalCompositeOperation = 'lighter';
+    cars.forEach(function(c){
+      var col = c.dir > 0 ? 'rgba(255,241,196,.55)' : 'rgba(240,71,90,.55)';
+      ctx.strokeStyle = col; ctx.lineWidth = 2; ctx.beginPath();
+      for (var x = 0; x <= W; x += 12){ var y = roadY(x, c.lane) + (c.gap * (c.dir > 0 ? 1 : -1)); if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y); }
+      ctx.stroke();
+    });
+    ctx.globalCompositeOperation = 'source-over';
+  }
+  function pos(e){ var r = cv.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; }
+  window.addEventListener('pointermove', function(e){
+    var r = cv.getBoundingClientRect();
+    if (e.clientY >= r.top && e.clientY <= r.bottom) mouse = pos(e); else mouse = null;
+  });
+  window.addEventListener('resize', function(){ resize(); if (reduce) still(); });
+  resize();
+  if (reduce) still(); else requestAnimationFrame(frame);
+})();
+
+/* ---------- Viewfinder work section ---------- */
+var SCENES = {
+  auto: '<defs><linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2450"/><stop offset="1" stop-color="#3b2a52"/></linearGradient><radialGradient id="beam" cx="0" cy="0.5" r="1"><stop offset="0" stop-color="#FFF1C4" stop-opacity=".55"/><stop offset="1" stop-color="#FFF1C4" stop-opacity="0"/></radialGradient></defs>'
+    + '<rect width="600" height="400" fill="url(#sky1)"/><rect y="270" width="600" height="130" fill="#0b1022"/>'
+    + '<rect y="270" width="600" height="2" fill="#F5A93B" opacity=".5"/>'
+    + '<polygon points="440,262 600,200 600,300" fill="url(#beam)"/>'
+    + '<g transform="translate(90 150) scale(1.15)"><path d="M20 118 C20 104 42 98 72 92 L112 62 C130 48 158 44 196 44 L262 48 C296 52 322 72 352 90 C384 94 404 102 404 116 L404 126 L20 126 Z" fill="#e9ecf6"/><path d="M118 68 C134 56 160 52 190 52 L206 52 L206 88 L104 88 Z" fill="#1b2450"/><path d="M216 52 L258 55 C280 58 296 72 312 88 L216 88 Z" fill="#1b2450"/><circle cx="106" cy="126" r="24" fill="#0b1022"/><circle cx="106" cy="126" r="11" fill="#9aa1c0"/><circle cx="330" cy="126" r="24" fill="#0b1022"/><circle cx="330" cy="126" r="11" fill="#9aa1c0"/><rect x="386" y="98" width="22" height="7" rx="3" fill="#FFF1C4"/><rect x="14" y="98" width="14" height="7" rx="3" fill="#F0475A"/></g>'
+    + '<ellipse cx="300" cy="300" rx="190" ry="10" fill="#F5A93B" opacity=".18"/>',
+  event: '<defs><linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#141a3a"/><stop offset="1" stop-color="#2c1f4a"/></linearGradient></defs>'
+    + '<rect width="600" height="400" fill="url(#sky2)"/>'
+    + '<polygon points="120,0 60,400 220,400" fill="#F5A93B" opacity=".14"/><polygon points="300,0 230,400 380,400" fill="#FFF1C4" opacity=".12"/><polygon points="480,0 420,400 560,400" fill="#F0475A" opacity=".16"/>'
+    + '<g opacity=".8"><circle cx="70" cy="90" r="18" fill="#F5A93B" opacity=".55"/><circle cx="170" cy="60" r="10" fill="#FFF1C4" opacity=".6"/><circle cx="260" cy="120" r="24" fill="#F0475A" opacity=".4"/><circle cx="380" cy="70" r="14" fill="#F5A93B" opacity=".55"/><circle cx="470" cy="130" r="20" fill="#FFF1C4" opacity=".4"/><circle cx="540" cy="60" r="12" fill="#F0475A" opacity=".55"/></g>'
+    + '<g fill="#080c1b"><circle cx="40" cy="330" r="22"/><rect x="14" y="350" width="52" height="60" rx="20"/><circle cx="130" cy="318" r="24"/><rect x="100" y="340" width="60" height="70" rx="22"/><circle cx="230" cy="336" r="21"/><rect x="204" y="356" width="52" height="60" rx="20"/><circle cx="330" cy="316" r="25"/><rect x="298" y="340" width="64" height="70" rx="22"/><circle cx="430" cy="332" r="22"/><rect x="402" y="352" width="56" height="60" rx="20"/><circle cx="530" cy="320" r="24"/><rect x="500" y="342" width="60" height="70" rx="22"/></g>',
+  private: '<defs><radialGradient id="key" cx=".5" cy=".4" r=".6"><stop offset="0" stop-color="#FFF1C4" stop-opacity=".5"/><stop offset="1" stop-color="#FFF1C4" stop-opacity="0"/></radialGradient><linearGradient id="sky3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#232b57"/><stop offset="1" stop-color="#3a2650"/></linearGradient></defs>'
+    + '<rect width="600" height="400" fill="url(#sky3)"/><circle cx="300" cy="170" r="240" fill="url(#key)"/>'
+    + '<rect x="120" y="60" width="360" height="290" rx="4" fill="none" stroke="#F3F0E6" stroke-opacity=".35" stroke-width="2"/>'
+    + '<path d="M120 200 L480 200 M120 130 L480 130 M240 60 L240 350 M360 60 L360 350" stroke="#F3F0E6" stroke-opacity=".12"/>'
+    + '<circle cx="300" cy="150" r="42" fill="#0b1022"/><path d="M215 350 C215 260 250 214 300 214 C350 214 385 260 385 350 Z" fill="#0b1022"/>'
+    + '<path d="M258 150 C258 116 342 116 342 150" fill="none" stroke="#F5A93B" stroke-width="3" opacity=".8"/>'
+};
+var FOCUS_MODE = {auto:'AUTO', event:'EVENT', private:'PRIVATE'};
+var EXPOS = {auto:['f/2.8','1/250','ISO 200'], event:['f/2','1/125','ISO 1600'], private:['f/1.8','1/200','ISO 100']};
+var scene = document.getElementById('scene');
+function showWork(k){
+  current = k;
+  scene.innerHTML = SCENES[k];
+  var d = I18N[lang].work[k];
+  document.getElementById('fcTitle').textContent = d.t;
+  document.getElementById('fcText').textContent = d.p;
+  var ul = document.getElementById('fcTags'); ul.innerHTML = '';
+  d.tags.forEach(function(t){ var li = document.createElement('li'); li.textContent = t; ul.appendChild(li); });
+  document.getElementById('hudMode').textContent = FOCUS_MODE[k];
+  var e = EXPOS[k]; document.getElementById('hudExp').textContent = e[0] + '  ' + e[1] + '  ' + e[2];
+  document.querySelectorAll('.tab').forEach(function(b){ b.setAttribute('aria-selected', b.dataset.k === k ? 'true' : 'false'); });
+}
+document.querySelectorAll('.tab').forEach(function(b){
+  b.addEventListener('click', function(){ showWork(b.dataset.k); });
+});
+(function(){
+  var vp = document.getElementById('viewport'), fb = document.getElementById('focusBox');
+  var hud = document.getElementById('hudExp');
+  vp.addEventListener('pointermove', function(e){
+    var r = vp.getBoundingClientRect();
+    var x = e.clientX - r.left, y = e.clientY - r.top;
+    fb.style.left = x + 'px'; fb.style.top = y + 'px';
+    var e0 = EXPOS[current], f = (1.8 + (x / r.width) * 3.2).toFixed(1);
+    hud.textContent = 'f/' + f + '  ' + e0[1] + '  ' + e0[2];
+  });
+})();
+
+/* ---------- Skills focus rack ---------- */
+(function(){
+  var rack = document.getElementById('rack');
+  var items = rack.querySelectorAll('li');
+  function on(el){ rack.classList.add('active'); items.forEach(function(i){ i.classList.toggle('on', i === el); }); }
+  function off(){ rack.classList.remove('active'); items.forEach(function(i){ i.classList.remove('on'); }); }
+  items.forEach(function(li){
+    li.addEventListener('mouseenter', function(){ on(li); });
+    li.addEventListener('focus', function(){ on(li); });
+    li.addEventListener('blur', off);
+  });
+  rack.addEventListener('mouseleave', off);
+})();
+
+/* ---------- init ---------- */
+(function(){
+  var l = 'en', th = null;
+  try { l = localStorage.getItem('ma-lang') || 'en'; th = localStorage.getItem('ma-theme'); } catch(e){}
+  if (th) document.documentElement.setAttribute('data-theme', th);
+  applyLang(l === 'ar' ? 'ar' : 'en');
+})();
+</script>
+</body>
+</html>
